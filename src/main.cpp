@@ -1,8 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <chrono>
 #include <random>
-#include <thread>
 
 // libglfw3-dev libglfw3 debian apt pkgs
 #include <GLFW/glfw3.h>
@@ -34,7 +32,6 @@ int koch_curve(){
 				glClear(GL_COLOR_BUFFER_BIT);
 				glColor3f(0.0f, 1.0f, 0.0f);
 				glBegin(GL_LINES);
-				chrono::high_resolution_clock::time_point start = chrono::high_resolution_clock::now();
 				vector<point> points;
 
 				points.push_back({.x = width_offset, .y = HEIGHT/4.0});
@@ -59,8 +56,7 @@ int koch_curve(){
 								new_points.push_back({.x = rx1, .y = ry1});
 
 								if(abs(ry1 - ry2) < 0.01){
-										new_points.push_back({.x = (rx2 - rx1) / 2.0 + rx1,
-																.y = ry1 + (rx1 - rx2) * sqrt(3.0) / 2.0});
+										new_points.push_back({.x = (rx2 - rx1) / 2.0 + rx1, .y = ry1 + (rx1 - rx2) * sqrt(3.0) / 2.0});
 								}
 								else if((x2 > x1) == (y1 > y2)){
 										new_points.push_back({.x = rx1 + (rx1 - rx2), .y = ry2});
@@ -83,13 +79,9 @@ int koch_curve(){
 				}
 
 				glVertex2i(points[0].x, points[0].y);
-				cout << chrono::duration_cast<chrono::duration<double>>
-						(chrono::high_resolution_clock::now() - start).count() << "\n";
-
 				glEnd();
 
 				glfwSwapBuffers(window);
-				this_thread::sleep_for(chrono::milliseconds(100));
 		}
 }
 

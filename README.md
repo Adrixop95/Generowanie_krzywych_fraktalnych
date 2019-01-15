@@ -14,5 +14,7 @@ W zasadzie w całości bazowany na [tym](https://github.com/carterturn/opengl_fr
 sudo apt-get install libglfw3-dev libglfw3 freeglut3-dev mesa-utils
 ```  
 
+Skrypt instalacyjny znajduje się w folderze /scripts.  
+
 Made with 😺 and 💝,  
 by Adrian Rupala

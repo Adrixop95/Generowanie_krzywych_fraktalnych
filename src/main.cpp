@@ -4,6 +4,7 @@
 #include <fstream>
 #include <GLFW/glfw3.h>
 #include <GL/gl.h>
+#include <GL/glut.h>
 
 using namespace std;
 
@@ -11,11 +12,16 @@ using namespace std;
 #define HEIGHT 720
 #define PI 3.14159265358
 
-int max_depth;
+typedef GLfloat point2[2];
+point2 v[]={{-1.0, -0.58}, {1.0, -0.58}, {0.0, 1.15}};
+
 
 struct point{
 		double x, y;
 };
+
+int max_depth;
+
 
 void koch_curve(){       
 
@@ -228,6 +234,68 @@ void hilbert_curve(){
 	glfwSwapBuffers(window);
 }
 
+void triangle( point2 a, point2 b, point2 c) {
+	glBegin(GL_TRIANGLES);
+	glVertex2fv(a);
+	glVertex2fv(b);
+	glVertex2fv(c);
+	glEnd();
+}
+
+void divide_triangle(point2 a, point2 b, point2 c, int m) {
+    point2 v0, v1, v2;
+    int j;
+
+    if(m>0) {
+        for(j=0; j<2; j++){
+            v0[j]=(a[j]+b[j])/2;
+        } 
+        for(j=0; j<2; j++){
+             v1[j]=(a[j]+c[j])/2;
+        }
+
+        for(j=0; j<2; j++){ 
+            v2[j]=(b[j]+c[j])/2; 
+        }
+
+        divide_triangle(a, v0, v1, m-1);
+        divide_triangle(c, v1, v2, m-1);
+        divide_triangle(b, v2, v0, m-1);
+    } else {
+        (triangle(a,b,c));
+    }
+}
+
+void display() {
+	glClear(GL_COLOR_BUFFER_BIT);
+	divide_triangle(v[0], v[1], v[2], max_depth);
+	glFlush();
+}
+
+void sierpinski_gasket(){
+
+	cout << "Podaj maksymalne zagnieżdżenie " << endl;
+	cin >> max_depth; 	
+
+	int argc = 1;
+	char *argv[1] = {(char*)"Something"};
+	glutInit(&argc, argv);
+
+	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
+	glutInitWindowSize(WIDTH, HEIGHT);
+	glutCreateWindow("Trojkat Sierpinskiego");
+	glutDisplayFunc(display);
+
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluOrtho2D(-2.0, 2.0, -2.0, 2.0);
+	glMatrixMode(GL_MODELVIEW);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(0.0f, 1.0f, 0.0f);
+
+	glutMainLoop();
+}
+
 int main(int argc, char * argv[]) {
 	int user_choice;
 	bool is_running = true;
@@ -242,7 +310,7 @@ int main(int argc, char * argv[]) {
 		cout << "\n1 - Krzywa Kocha (Koch snowflake)" << endl;
 		cout << "2 - Smok Heighwaya (Dragon curve)" << endl;
 		cout << "3 - Krzywa Hilberta (Hilbert curve)" << endl;
-		cout << "4 - null" << endl;
+		cout << "4 - Trójkąt Sierpińskiego (Sierpinski gasket)" << endl;
 		cout << "5 - null" << endl;
 		cout << "6 - null" << endl;
 		cout << "0 - Wyjdz z aplikacji\n" << endl;
@@ -260,6 +328,7 @@ int main(int argc, char * argv[]) {
 			hilbert_curve();
 		}
 		else if (user_choice == 4) {
+			sierpinski_gasket();
 		}
 		else if (user_choice == 5) {
 		}

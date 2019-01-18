@@ -5,4 +5,4 @@
 # Preparing environment for Curve app
 
 sudo apt-get update
-sudo apt-get install libglfw3-dev libglfw3 freeglut3-dev mesa-utils
+sudo apt-get install g++ make libglfw3-dev libglfw3 freeglut3-dev mesa-utils

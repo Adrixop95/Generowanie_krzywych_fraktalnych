@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2019.1.18)  18 JAN 2019 12:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2019.1.18)  18 JAN 2019 19:16
 entering extended mode
 **./szablon.tex
 (szablon.tex
@@ -220,6 +220,66 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip49
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\was\gensymb.sty"
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count111
+\float@exts=\toks27
+\float@box=\box28
+\@float@everytoks=\toks28
+\@floatcapt=\box29
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\movie15\movie15.sty"
+Package: movie15 2012/05/16
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\ifdraft.sty"
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)
+\@MXV@page=\count112
+\@MXV@adict=\count113
+\@MXV@aadict=\count114
+\@MXV@includes=\count115
+\@MXV@players=\count116
+\@MXV@links=\count117
+\@MXV@width=\dimen117
+\@MXV@height=\dimen118
+\@MXV@depth=\dimen119
+\@MXV@totalheight=\dimen120
+\@MXV@@boxdepth=\dimen121
+\@MXV@traiselen=\dimen122
+\@MXV@braiselen=\dimen123
+\@MXV@start=\dimen124
+\@MXV@end=\dimen125
+\@MXV@textbox=\box30
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
+)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2018/11/13 3.27 The Babel package
 
@@ -238,22 +298,22 @@ Language: polish 2005/03/31 v1.2l Polish support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2018/11/13 3.27 Babel common definitions
-\babel@savecnt=\count111
-\U@D=\dimen117
+\babel@savecnt=\count118
+\U@D=\dimen128
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\txtbabel.def")
-\bbl@dirlevel=\count112
+\bbl@dirlevel=\count119
 )
 Package babel Info: Making " an active character on input line 83.
-\pl@left=\dimen118
-\pl@down=\dimen119
-\pl@right=\dimen120
-\pl@temp=\dimen121
+\pl@left=\dimen129
+\pl@down=\dimen130
+\pl@right=\dimen131
+\pl@temp=\dimen132
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2018/04/06 v1.3b Input encoding file
-\inpenc@prehook=\toks27
-\inpenc@posthook=\toks28
+\inpenc@prehook=\toks29
+\inpenc@posthook=\toks30
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\cp1250.def"
 File: cp1250.def 2018/04/06 v1.3b Input encoding file
@@ -571,20 +631,16 @@ Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\courier.sty"
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-\c@twierdzenie=\count113
+\c@twierdzenie=\count120
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty"
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count114
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
+\c@AlgoLine=\count121
 \algocf@hangindent=\skip50
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count115
+\c@checkoddpage=\count122
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -600,88 +656,115 @@ Package: relsize 2013/03/29 ver 4.1
 \skiplength=\skip56
 \algomargin=\skip57
 \skipalgocfslide=\skip58
-\algowidth=\dimen122
-\inoutsize=\dimen123
-\inoutindent=\dimen124
-\interspacetitleruled=\dimen125
-\interspacealgoruled=\dimen126
-\interspacetitleboxruled=\dimen127
+\algowidth=\dimen133
+\inoutsize=\dimen134
+\inoutindent=\dimen135
+\interspacetitleruled=\dimen136
+\interspacealgoruled=\dimen137
+\interspacetitleboxruled=\dimen138
 \algocf@ruledwidth=\skip59
-\algocf@inoutbox=\box28
-\algocf@inputbox=\box29
+\algocf@inoutbox=\box31
+\algocf@inputbox=\box32
 \AlCapSkip=\skip60
 \AlCapHSkip=\skip61
 \algoskipindent=\skip62
-\algocf@nlbox=\box30
-\algocf@hangingbox=\box31
-\algocf@untilbox=\box32
+\algocf@nlbox=\box33
+\algocf@hangingbox=\box34
+\algocf@untilbox=\box35
 \algocf@skipuntil=\skip63
-\algocf@capbox=\box33
+\algocf@capbox=\box36
 \algocf@lcaptionbox=\skip64
 \algoheightruledefault=\skip65
 \algoheightrule=\skip66
 \algotitleheightruledefault=\skip67
 \algotitleheightrule=\skip68
-\c@algocfline=\count116
-\c@algocfproc=\count117
-\c@algocf=\count118
-\algocf@algoframe=\box34
-\algocf@algobox=\box35
-) (szablon.aux)
+\c@algocfline=\count123
+\c@algocfproc=\count124
+\c@algocf=\count125
+\algocf@algoframe=\box37
+\algocf@algobox=\box38
+) (szablon.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `citekey' multiply defined.
+
+
+LaTeX Warning: Label `citekey' multiply defined.
+
+)
 \openout1 = `szablon.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 34.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 39.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 39.
 
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 34.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 39.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 39.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd"
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 34.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 39.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 39.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmxfutm.fd"
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 34.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 39.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Try loading font information for T1+futs on input line 34.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 39.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\t1futs.fd"
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
-\AtBeginShipoutBox=\box36
-Package hyperref Info: Link coloring OFF on input line 34.
+\AtBeginShipoutBox=\box39
+Package hyperref Info: Link coloring OFF on input line 39.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -689,102 +772,411 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count119
+\c@section@level=\count126
 )
-LaTeX Info: Redefining \ref on input line 34.
-LaTeX Info: Redefining \pageref on input line 34.
-LaTeX Info: Redefining \nameref on input line 34.
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \nameref on input line 39.
 
 (szablon.out) (szablon.out)
 \@outlinefile=\write3
 \openout3 = `szablon.out'.
 
+\symgns@font=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/futs/m/n --> TS1/futs/bx/n on input line 39.
+Package gensymb Info: Math companion symbols declared on input line 39.
+LaTeX Info: Redefining \degree on input line 39.
+LaTeX Info: Redefining \celsius on input line 39.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 39.
+LaTeX Info: Redefining \ohm on input line 39.
+Package gensymb Info: Using \textohm for \ohm on input line 39.
+Package gensymb Info: Using \textmu for \micro on input line 39.
+ ABD: EveryShipout initializing macros
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count127
+\scratchdimen=\dimen139
+\scratchbox=\box40
+\nofMPsegments=\count128
+\nofMParguments=\count129
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count130
+\MPscratchDim=\dimen140
+\MPnumerator=\count131
+\makeMPintoPDFobject=\count132
+\everyMPtoPDFconversion=\toks32
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 48.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 48.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 53.
  [1
 
 {C:/Users/adria/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 61.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 66.
 
 Rozdzia\l  1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.66 	\chapter{Teoria i algorytmy}
+l.76 	\chapter{Teoria i algorytmy}
                                    [1
 
 ]
 Rozdzia\l  2.
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 87
+
+Overfull \hbox (0.804pt too wide) in paragraph at lines 78--79
+[]\T1/futs/m/n/12 Istnieje wiele mo»-li-wo-±ci wy-ge-ne-ro-wa-nia krzy-wych fra
+k-tal-nych. Ka»dy z wy-
+ []
+
+
+Overfull \hbox (2.92757pt too wide) in paragraph at lines 78--79
+\T1/futs/m/n/12 ge-ne-ro-wa-nych w apli-ka-cji ob-ra-zów jest krzyw¡ o od-po-wi
+ed-nich wªa-±ci-wo-±ciach. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 80
 .
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutmi.fd"
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 87.
+(Font)              scaled to size 11.03998pt on input line 80.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 87.
+(Font)              scaled to size 8.27998pt on input line 80.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 87.
-LaTeX Font Info:    Try loading font information for U+msa on input line 87.
+(Font)              scaled to size 6.43999pt on input line 80.
+LaTeX Font Info:    Try loading font information for U+msa on input line 80.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 87.
+LaTeX Font Info:    Try loading font information for U+msb on input line 80.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 87.
+(Font)              scaled to size 11.03998pt on input line 80.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 87.
+(Font)              scaled to size 8.27998pt on input line 80.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 87.
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <8> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 101.
- [2
+(Font)              scaled to size 6.43999pt on input line 80.
+LaTeX Font Info:    Try loading font information for TS1+futs on input line 80.
 
-] [3]
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\ts1futs.fd"
+File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
+)
+Overfull \hbox (7.4755pt too wide) in paragraph at lines 80--81
+\T1/futs/m/n/12 któ-rym wy-ge-ne-ro-wany zo-staje przy-bli-»ony ob-raz atrak-to
+ra (zbioru w prze-strzeni,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
+ []
+
+<./images/sierpinski_gasket.png, id=37, 965.10562pt x 566.115pt>
+File: ./images/sierpinski_gasket.png Graphic file (type png)
+<use ./images/sierpinski_gasket.png>
+Package pdftex.def Info: ./images/sierpinski_gasket.png  used on input line 86.
+
+(pdftex.def)             Requested size: 289.53392pt x 169.8358pt.
+[2
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.93 	
+       <./images/sierpinski_gasket.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+<./images/koch_4.png, id=47, 965.10562pt x 566.115pt>
+File: ./images/koch_4.png Graphic file (type png)
+<use ./images/koch_4.png>
+Package pdftex.def Info: ./images/koch_4.png  used on input line 101.
+(pdftex.def)             Requested size: 289.53392pt x 169.8358pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--120
+
+ []
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.121 	$
+        f_{2}(x, y) =\frac{1}{\sqrt{2}} \begin{pmatrix} <./images/koch_4.png>]
+<./images/dragon_curve.png, id=54, 965.10562pt x 566.115pt>
+File: ./images/dragon_curve.png Graphic file (type png)
+<use ./images/dragon_curve.png>
+Package pdftex.def Info: ./images/dragon_curve.png  used on input line 133.
+(pdftex.def)             Requested size: 289.53392pt x 169.8358pt.
+<./images/hilbert_curve.png, id=55, 965.10562pt x 566.115pt>
+File: ./images/hilbert_curve.png Graphic file (type png)
+<use ./images/hilbert_curve.png>
+Package pdftex.def Info: ./images/hilbert_curve.png  used on input line 142.
+(pdftex.def)             Requested size: 289.53392pt x 169.8358pt.
+
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.147 	\chapter{Opis programu}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{figure.2.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.147 	\chapter{Opis programu}
+                               <./images/dragon_curve.png> <./images/hilbert_cu
+rve.png>]
 Rozdzia\l  3.
+
+Overfull \hbox (6.18019pt too wide) in paragraph at lines 151--152
+\T1/futs/m/n/12 przy-go-to-wany pro-sty skrypt in-sta-la-cyjny, który to po wy-
+wo-ªa-niu in-sta-luje wszyst-
+ []
+
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 136.
-[4
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 156.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 170.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Overfull \hbox (5.8917pt too wide) in paragraph at lines 172--173
+\T1/futs/m/n/12 dªo-wym \T1/pcr/m/n/12 main.cpp \T1/futs/m/n/12 oraz pli-kiem m
+ake \T1/pcr/m/n/12 makefile \T1/futs/m/n/12 a na-st¦p-nie wpi-sa¢ ko-mend¦
+ []
+
+[5
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
- [5
+<./images/working1.png, id=70, 1445.4pt x 813.0375pt>
+File: ./images/working1.png Graphic file (type png)
+<use ./images/working1.png>
+Package pdftex.def Info: ./images/working1.png  used on input line 185.
+(pdftex.def)             Requested size: 433.62335pt x 243.91313pt.
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
+Overfull \hbox (43.62335pt too wide) in paragraph at lines 185--186
+ [][] 
+ []
+
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.190 	\begin{thebibliography}{99}
+                                   <./images/working1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 192--194
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--215
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+
+Underfull \hbox (badness 2460) in paragraph at lines 221--223
+[]\T1/futs/m/n/10.95 Schaefer, S., Le-vin, D., Gold-man, R.: Sub-di-vi-sion Sch
+e-mes and At-trac-tors.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--223
+
+ []
+
+
+Package movie15 Warning: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+(movie15)                @@ Package `movie15' is obsolete and @@
+(movie15)                @@ superseded by `media9'.           @@
+(movie15)                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 226.
+[7
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
+een already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.226 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{cite.}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.226 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{cite.}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.226 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{cite.}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.226 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{cite.}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.226 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{cite.}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.226 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{cite.}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.226 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{cite.citekey}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.226 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{cite.citekey}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.226 \end{document}
+                    ]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 226.
  (szablon.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 226.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 226.
 Package rerunfilecheck Info: File `szablon.out' has not changed.
 (rerunfilecheck)             Checksum: 05B3AE048775517F34451F34E2A8F8D9;319.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 226.
  ) 
 Here is how much of TeX's memory you used:
- 8035 strings out of 492965
- 114730 string characters out of 3135716
- 216249 words of memory out of 3000000
- 11741 multiletter control sequences out of 15000+200000
- 84078 words of font info for 79 fonts, out of 3000000 for 9000
+ 9385 strings out of 492965
+ 134801 string characters out of 3135716
+ 268459 words of memory out of 3000000
+ 13034 multiletter control sequences out of 15000+200000
+ 78533 words of font info for 85 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,14n,29p,316b,553s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,8n,27p,892b,363s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/a
-dobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/pu
-tri8a.pfb>
-Output written on szablon.pdf (6 pages, 67637 bytes).
+KTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/adobe/utopia/putb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/ut
+opia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on szablon.pdf (8 pages, 991541 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 119 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 500000)
+ 74 words of extra memory for PDF output out of 10000 (max. 10000000)
 

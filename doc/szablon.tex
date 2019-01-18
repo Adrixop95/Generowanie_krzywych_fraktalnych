@@ -5,6 +5,11 @@
 \usepackage{amsfonts}
 \usepackage{amsthm}
 \usepackage{hyperref}
+\usepackage{gensymb}
+\usepackage{float}
+\usepackage{movie15}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 \usepackage[polish]{babel}
 \usepackage[cp1250]{inputenc}
@@ -59,98 +64,163 @@
 	
 	%**************************************************************************
 	\chapter{Wstêp}
+		
+
+	Fraktale to zbiory o skomplikowanej, rekurencyjnej budowie. Kryj¹ w sobie nieskoñczone samopodobieñstwo. Mo¿na je dostrzec w przyrodzie, miêdzy innymi w budowie kalafiora czy rozga³êzieñ naczyñ krwionoœnych. W grafice komputerowej fraktale wykorzystuje siê do tworzenia ró¿norodnych losowych krajobrazów lub map geograficznych. 
 	
-	Krótkie wprowadzenie w tematykê projektu oraz opis co by³o celem projektu.
+	G³ównym celem projektu by³o stworzenie prostej aplikacji terminalowej dla systemu Ubuntu GNU/Linux generuj¹cej popularne krzywe (Krzyw¹ Kocha, Smoka Heighwaya, Krzyw¹ Hilberta oraz Trójk¹t Sierpiñskiego), które mo¿na uznaæ za obiekty fraktalne ze wzglêdu na ich rekurencyjn¹ definicjê oraz samopodobny uk³ad.
+	
+	U¿ytkownik po uruchomieniu aplikacji wybiera z prostego, kontekstowego menu obiekt, który ma zostaæ narysowany, a nastêpnie musi podaæ maksymaln¹ g³êbokoœæ (iloœæ generowanych powtórzeñ danego obiektu).
 	
 	%**************************************************************************
 	\chapter{Teoria i algorytmy}
 	
-	Opisaæ ca³¹ teoriê (definicje, twierdzenia), algorytmy (pseudokody, a nie kod czy opis s³owny).
+	Istnieje wiele mo¿liwoœci wygenerowania krzywych fraktalnych. Ka¿dy z wygenerowanych w aplikacji obrazów jest krzyw¹ o odpowiednich w³aœciwoœciach.\\
 	
-	Wszystkie algorytmy, rysunki, tabele maj¹ byæ numerowane i posiadaæ odwo³anie w tekœcie.
+	Trójk¹t Sierpiñskiego (Rysunek 2.1) zosta³ wygenerowany za pomoc¹ metody "Gry w chaos". Jest to algorytm komputerowego generowania fraktali, w którym wygenerowany zostaje przybli¿ony obraz atraktora (zbioru w przestrzeni, do którego w miarê up³ywu czasu zmierzaj¹ wszystkie trajektorie na danym obszarze) lub punktu sta³ego dowolnego systemu funkcji iterowanych. Algorytm zaczyna od pewnego punktu $x_{0}$ nastêpnie ka¿da kolejna iteracja odbywa siê za pomoc¹ wzoru $x_{n-1} = f^{m} (x_{n})$, gdzie $f^{m} (x)$ jest jedn¹ z funkcji iterowanych, losowo wybieran¹ dla ka¿dej iteracji. Gdy wartoœæ pocz¹tkowa $x_{0}$ nale¿y do atraktora systemu funkcji iterowanych, wówczas wszystkie punkty $x_{n}$ równie¿ do niego nale¿¹ i z prawdopodobieñstwem 1 tworz¹ zbiór gêsty.
 	
-	\begin{definicja}
-		Treœæ definicji... Definiowane pojêcie nale¿y \emph{wyró¿niæ}.
-	\end{definicja}
-		
-	\begin{twierdzenie}
-		Treœæ twierdzenia.
-	\end{twierdzenie}
+	W przypadku wygenerowania Trójk¹ta Sierpiñskiego nale¿y przyj¹æ na pocz¹tku postawienie 3 dowolnych punktów, po czym algorytm wybiera sobie kolejny punkt p³aszczyzny. Nastêpnie wybrany zostaje dowolny z pocz¹tkowych punktów i stawia siê punkt w po³owie odleg³oœci miêdzy czwartym punktem a wybranym. Powtarza siê ten krok, za ka¿dym razem oznaczaj¹c punkt le¿¹cy dok³adnie w po³owie odleg³oœci miêdzy nowym punktem a jednym z trzema pierwszych. Efektem algorytmu jest jeden z wariantów Trójk¹ta Sierpiñskiego. Wierzcho³ki to ustalone na pocz¹tku punkty.\\
 	
-	\begin{przyklad}
-		Treœæ przyk³adu.
-	\end{przyklad}
-	
-	\begin{algorithm}
-		\caption{Sortowanie przez wstawianie}
-		\label{alg:ins_sort}
-		\KwIn{tablica $T[1\ldots n]$}
-		\KwOut{posortowana tablica $T$}
-		\BlankLine
-		\For{$i = 2,\ldots n$}
-		{
-			$x = T[i]$\\
-			$j = i -1$\\
-			\While{$j > 0$ \KwAnd $x < T[j]$}
-			{
-				$T[j+1] = T[j]$\\
-				$j = j - 1$\\
-			}
-			$T[j+1] = x$\\
-		}
-	\end{algorithm}
-	
-	\begin{figure}
+	\begin{figure}[h]
 		\centering
-		\fbox{
-			\begin{minipage}[c][.5\textwidth]{.5\textwidth}
-				obrazek
-			\end{minipage}
-		}
-		\caption{Podpis.}
-		\label{fig:ex}
+		\includegraphics[scale=0.3]{sierpinski_gasket}
+		\caption{Trójk¹t Sierpiñskiego dla 100 * 10000 punktów} 
 	\end{figure}
 	
-	\begin{table}
+	Trzy pozosta³e krzywe - Krzywa Kocha, Smok Heighwaya oraz Krzywa Hilberta zosta³y wygenerowane za pomoc¹ pod¹¿ania œcie¿k¹ wzd³u¿ krzywej, a nastêpnie zmieniaj¹c krzyw¹ w miarê wzrostu g³êbokoœci fraktala.
+	
+	W przypadku generowania Krzywej Kocha (Koch Snowflake) produkt koñcowy powstaje z odcinka, który nastêpnie jest podzielony na 3 czêœci i jego œrodkowy podzia³ zostaje zast¹piony "z¹bkiem" o ramieniu d³ugoœci $\frac{1}{3}$ odcinka takim, ¿e wraz z usuwan¹ czêœci¹ zostaje utworzony trójk¹t równoboczny. Krok jest powtarzany tyle razy, ile poda u¿ytkownik.
+	
+	\begin{itemize}
+		\item Krok 0. Krzywa Kocha w kroku zerowym $k = 0$ jest odcinkiem. Zostaje on podzielony na 3 równe czêœci, a œrodkow¹ zast¹pi¹ dwa odcinki d³ugoœci $\frac{1}{3}l$, nachylone wzglêdem niej pod k¹tem $60\degree$. Wraz z wyciêtym fragmentem mog³yby one utworzyæ trójk¹t równoboczny. \\
+		\item Krok 1. Krzywa Kocha w kroku pierwszym $k = 1$, po transformacji zawiera 4 odcinki, ka¿dy równy $\frac{1}{3}l$. W kolejnym kroku ka¿dy z tych odcinków ponownie zostanie podzielony na 3 czêœci, a œrodkow¹ znów zast¹pimy dwoma odcinkami.\\
+		\item Krok 2. Krzywa Kocha w kroku drugim $k = 2$ zawiera ju¿ 16 odcinków, ka¿dy d³ugoœci $\frac{1}{9}l$. W kolejnym kroku $k = 3$ powstanie ich 64 (Rysunek 2.2), ka¿dy d³ugoœci $\frac{1}{27}l$.
+	\end{itemize}
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{koch_4}
+	\caption{Krzywa Kocha, podzia³ k = 3}
+	\end{figure}
+		
+	Smok Heinghwaya (Rysunek 2.3) to przyk³ad kolejnej krzywej, jak¹ jest w stanie wygenerowaæ aplikacja. Mo¿e byæ on zdefiniowany jako atraktor systemu funkcji zwê¿aj¹cych zapisanego w notacji zespolonej dla zestawu dwóch punktów $S_{0} = \{0, 1\}$. \\
+	
+	$f_{1}(z) = \frac{(1+i)z}{2}$\\
+	
+	$f_{2}(z) = \frac{(1-i)z}{2}$\\
+	
+	Najczêœciej jednak w oprogramowaniu, równie¿ w przypadku tej aplikacji zastosowane s¹ przekszta³cenia bazuj¹ce na funkach posiadaj¹ce liczby rzeczywiste: \\
+	
+	$f_{1}(x, y) =\frac{1}{\sqrt{2}} \begin{pmatrix}
+	\cos{45} & -\sin{45} \\
+	\sin{45} & \cos{45}
+	\end{pmatrix} \begin{pmatrix}
+	x \\ 
+	y
+	\end{pmatrix} $\\
+	
+	$f_{2}(x, y) =\frac{1}{\sqrt{2}} \begin{pmatrix}
+	\cos{135} & -\sin{135} \\
+	\sin{135} & \cos{135}
+	\end{pmatrix} \begin{pmatrix}
+	x \\ 
+	y
+	\end{pmatrix} + \begin{pmatrix}
+	1 \\
+	0
+	\end{pmatrix} $	
+	\begin{figure}[H]
 		\centering
-		\caption{Podpis.}
-		\label{tab:ex}
-		\begin{tabular}{llll}
-			\hline
-			{\bf Nag³ówek $1$} & {\bf Nag³ówek $2$} & \ldots & {\bf Nag³ówek $N$} \\
-			\hline
-			\hline
-			Wartoœæ $11$ & Wartoœæ $12$ & \ldots & Wartoœæ $1N$ \\
-			\ldots & \ldots & \ldots & \ldots \\
-			Wartoœæ $M1$ & Wartoœæ $M2$ & \ldots & Wartoœæ $MN$ \\
-			\hline
-		\end{tabular}
-	\end{table}
+		\includegraphics[scale=0.3]{dragon_curve}
+		\caption{Smok Heighwaya dla 16 iteracji} 
+	\end{figure}
+	
+	
+	Ostatni¹ krzyw¹, która zosta³a zaprogramowana w ramach tego projektu, jest Krzywa Hilberta (Rysunek 2.4). Jest to krzywa, która wype³nia p³aszczyznê, przechodz¹c przez jej wszystkie punkty. Krzywa ta powstaje w wyniku po³¹czenia ³amania kwadratów powsta³ych z podzia³u kwadratu podstawowego kolejno na 4, 16, 64 itd. Zarówno krzywa Hilberta, jak i jej przybli¿enia s¹ u¿ywane w informatyce, miêdzy innymi w adresacji IP, poniewa¿ daj¹ odwzorowanie miêdzy przestrzeni¹ 1D a 2D, która doœæ dobrze zachowuje lokalizacjê. Jeœli punkty $(x, y)$ s¹ wspó³rzêdnymi punktu w obrêbie kwadratu jednostki, a $d$ jest odleg³oœci¹ wzd³u¿ krzywej, gdy osi¹gnie ten punkt, to punkty, które maj¹ pobliskie wartoœci $d$ bêd¹ mia³y równie¿ wartoœci pobliskie $(x, y)$. Nawet gdy punkty w obrêbie wspó³rzêdnych $(x. y)$ bêd¹ znajdowa³y siê blisko siebie, ich wartoœæ $d$ bêdzie oddalona.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.3]{hilbert_curve}
+		\caption{Krzywa Hilberta dla 5 iteracji} 
+	\end{figure}
 	
 	%**************************************************************************
 	\chapter{Opis programu}
+		
+	Program zosta³ napisany w jêzyku programowania C++ z wykorzystaniem technologii OpenGL oraz biblioteki graficznej GLFW. Do skompilowania programu zosta³ wykorzystany projekt GNU Compiler Collection a konkretnie jego czêœæ bêd¹ca kompilatorem g++. W celu u³atwienia kompilacji zosta³ utworzony plik "makefile" bêd¹cy zalecanym sposobem kompilacji projektu.
 	
-	Opisaæ w jakim jêzyku program zosta³ napisany, u¿ywane biblioteki oraz inne programy u¿yte przy tworzeniu projektu.
+	Aby u³atwiæ przygotowanie potrzebnych bibliotek dla systemów opartych na dystrybucji Debian GNU/Linux w tym Ubuntu GNU/Linux zosta³ równie¿ przygotowany prosty skrypt instalacyjny, który to po wywo³aniu instaluje wszystkie potrzebne biblioteki.
+	
+	Do edycji pliku Ÿród³owego zosta³ wykorzystany edytor Visual Studio Code wraz z nastêpuj¹cymi dodatkami:  Microsoft C/C++ oraz C++ Intellisense.
 	
 	%--------------------------------------------------------------------------
 	\section{Mo¿liwoœci programu}
+
+	Program po uruchomieniu potrafi narysowaæ wybran¹ przez u¿ytkownika koñcowego krzyw¹ zgodnie z podan¹ przez niego liczb¹ zagnie¿d¿eñ. Program potrafi narysowaæ nastêpuj¹ce krzywe: 
 	
-	Opisaæ dok³adnie jakie program posiada mo¿liwoœci zwi¹zane z tematem projektu.
+	\begin{itemize}
+	\item Krzyw¹ Kocha (Koch snowflake)
+	\item Smoka Heighwaya (Dragon curve)
+	\item Krzyw¹ Hilberta (Hilbert curve)
+	\item Trójk¹t Sierpiñskiego (Sierpinski gasket)
+	\end{itemize}
 
 	%--------------------------------------------------------------------------
 	\section{Opis programu}
 	
-	Opisaæ dok³adnie obs³ugê programu.
+	Aplikacja zosta³a przygotowana z myœl¹ o wywo³aniu jej z poziomu pow³oki Bash. W celu uruchomienia aplikacji nale¿y uruchomiæ konsolê, przejœæ do folderu z aplikacj¹ za pomoc¹ polecenia \texttt{\$ cd sciezka/do/folderu}. Gdy znajdujemy siê w katalogu programu, aby uruchomiæ aplikacjê, nale¿y u¿yæ polecenia \texttt{\$./krzywe}. 
+	
+	Aby skompilowaæ aplikacjê, nale¿y znajdowaæ siê w folderze z plikiem Ÿród³owym \texttt{main.cpp} oraz plikiem make \texttt{makefile} a nastêpnie wpisaæ komendê \texttt{\$ make}.  
+	
+	Aby uruchomiæ plik postinstalacyjny maj¹cy na celu przygotowaæ wszystkie potrzebne biblioteki nale¿y przejœæ do katalogu \texttt{scripts}, nadaæ uprawnienia do wykonywania pliku za pomoc¹ polecenia \texttt{\$ chmod +x post.sh} a nastêpnie wykonaæ skrypt za pomoc¹ komendy \texttt{./post.sh}. Skrypt do dzia³ania wymaga podania has³a administratora ze wzglêdu na instalacjê bibliotek z ró¿nych repozytoriów.
+	
+	Istnieje mo¿liwoœæ uruchomienia aplikacji w œrodowisku Windows Subsystem for Linux (dla podsystemu Ubuntu) (Rysunek 3.1). W tym celu nale¿y zainstalowaæ dodatkowo aplikacjê \texttt{vcxsrv} emuluj¹c¹ X Server dla systemów Windows oraz po uruchomieniu podsystemu nale¿y wykonaæ komendê\\ \texttt{\$ export DISPLAY=localhost:0.0}, która to umo¿liwia wyexportowanie wyœwietlanego obrazu na zewnêtrzny system (Windows 10). Nale¿y jednak pamiêtaæ, aby wczeœniej uruchomiæ aplikacjê \texttt{vcxsrv} z nastêpuj¹cymi parametrami: 
+	\begin{itemize}
+		\item Multiple windows
+		\item Start no client
+		\item Clipboard, Primary selection (odznaczyæ Native opengl)
+	\end{itemize}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{working1}
+	\caption{Aplikacja uruchomiona na systemie Windows 10}
+	\end{figure}
 	
 	%**************************************************************************
 	\begin{thebibliography}{99}
-		\bibitem{HA02} Haines, E., Akenine-M\"oller, T.: B\'ezier Triangles and N-Patches. (2002) \\
-			\href{http://www.gamasutra.com/view/feature/2980/bezier_triangles_and_npatches.php}{http://www.gamasutra.com/view/feature/2980/bezier\_triangles\_and\\ \_npatches.php}
-			
-		\bibitem{HSH04} Henriksen, K., Sporring, J., Hornbaek, K.: Virtual Trackballs Revisited. IEEE Transactions on Visualization and Computer Graphics 10(2), 206-216, (2004)
+
+		\bibitem{} Dokumentacja biblioteki GLFW \\
+		\href{https://www.glfw.org/documentation.html}{https://www.glfw.org/documentation.html}\\
 		
-		\bibitem{Sho92} Shoemake, K.: ARCBALL: A User Interface for Specifying Three-dimensional Orientation Using a Mouse. [w:] Proceedings of the Conference on Graphics Interface '92, Vancouver, Canada, pp. 151-156, (1992)
+		\bibitem{} Dokumentacja OpenGL API \\
+		\href{http://docs.gl/}{http://docs.gl/}\\
 		
-		\bibitem{SWND08} Shreiner, D., Woo, M., Neider, J., Davis, T.: OpenGL Programming Guide, 6th Edition. Addison-Wesley, (2008)
+		\bibitem{} Dokumentacja jêzyka C++ \\
+		\href{https://devdocs.io/cpp/}{https://devdocs.io/cpp/}\\
+		
+		\bibitem{} Metodologia Chaos Game \\
+		\href{https://rosettacode.org/wiki/Chaos_game}{https://rosettacode.org/wiki/Chaos\_game}\\
+		
+		\bibitem{} Gra w chaos - Wikipedia \\
+		\href{https://pl.wikipedia.org/wiki/Gra_w_chaos}{https://pl.wikipedia.org/wiki/Gra\_w\_chaos} \\
+		
+		\bibitem{} Krzywa Kocha - Wikipedia \\
+		\href{https://pl.wikipedia.org/wiki/Krzywa_Kocha}{https://pl.wikipedia.org/wiki/Krzywa\_Kocha} \\
+		
+		\bibitem{} Smok Heighwaya - Wikipedia \\ 
+		\href{https://pl.wikipedia.org/wiki/Smok_Heighwaya}{https://pl.wikipedia.org/wiki/Smok\_Heighwaya} \\		
+		
+		\bibitem{} Krzywa Hilberta - Wikipedia \\
+		\href{https://pl.wikipedia.org/wiki/Krzywa_Hilberta}{https://pl.wikipedia.org/wiki/Krzywa\_Hilberta} \\
+		
+		\bibitem{citekey} Goldman, R.: The Fractal Nature of Bézier Curves. Proceedings of Geometric
+		Modeling and Processing: Theory and Applications, pp. 3-11, (2004) \\
+		
+		\bibitem{citekey} Kotarski, W.: Fraktalne modelowanie kszta³tu. EXIT, (2008)\\
+		
+		\bibitem{citekey} Schaefer, S., Levin, D., Goldman, R.: Subdivision Schemes and Attractors. Eurographics
+		Symposium on Geometry Processing, pp. 171-180, (2005)\\
+		
+		
 	\end{thebibliography}
 \end{document}

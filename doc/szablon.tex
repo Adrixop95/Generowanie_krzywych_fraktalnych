@@ -1,0 +1,156 @@
+\documentclass[a4paper, 12pt]{mwrep}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{hyperref}
+
+\usepackage[polish]{babel}
+\usepackage[cp1250]{inputenc}
+\usepackage[T1]{polski}
+
+\usepackage{fourier} %Roman+math - Utopia
+\usepackage[scaled=.92]{helvet} %Sans serif - Helvetica
+\usepackage{courier} %Monospace - Courier
+
+\newtheorem{twierdzenie}{Twierdzenie}[chapter]
+\newtheorem{lemat}[twierdzenie]{Lemat}
+\newtheorem{wniosek}[twierdzenie]{Wniosek}
+
+\theoremstyle{definition}
+\newtheorem{definicja}[twierdzenie]{Definicja}
+
+\theoremstyle{remark}
+\newtheorem{przyklad}[twierdzenie]{Przyk³ad}
+\newtheorem{uwaga}[twierdzenie]{Uwaga}
+
+\usepackage[ruled, vlined, linesnumbered]{algorithm2e}
+\SetKwInput{KwIn}{Wejœcie}
+\SetKwInput{KwOut}{Wyjœcie}
+\renewcommand{\algorithmcfname}{Algorytm}
+\SetKw{KwAnd}{and}
+
+\begin{document}
+\renewcommand{\tablename}{Tabela}
+	\begin{titlepage}
+		\begin{center}
+			{\sc \Large Uniwersytet Œl¹ski
+			
+			Instytut Informatyki}
+			
+			\vfill
+			
+			{\Large Adrian Rupala}
+			
+			\mbox{}
+			
+			{\bf \huge Krzywe generowane fraktalnie}
+			
+			\mbox{}
+			
+			{\large (projekt zaliczeniowy z elementów animacji i grafiki 3D)}
+			
+			\vfill
+			
+			Sosnowiec 2019
+		\end{center}
+	\end{titlepage}
+	
+	%**************************************************************************
+	\chapter{Wstêp}
+	
+	Krótkie wprowadzenie w tematykê projektu oraz opis co by³o celem projektu.
+	
+	%**************************************************************************
+	\chapter{Teoria i algorytmy}
+	
+	Opisaæ ca³¹ teoriê (definicje, twierdzenia), algorytmy (pseudokody, a nie kod czy opis s³owny).
+	
+	Wszystkie algorytmy, rysunki, tabele maj¹ byæ numerowane i posiadaæ odwo³anie w tekœcie.
+	
+	\begin{definicja}
+		Treœæ definicji... Definiowane pojêcie nale¿y \emph{wyró¿niæ}.
+	\end{definicja}
+		
+	\begin{twierdzenie}
+		Treœæ twierdzenia.
+	\end{twierdzenie}
+	
+	\begin{przyklad}
+		Treœæ przyk³adu.
+	\end{przyklad}
+	
+	\begin{algorithm}
+		\caption{Sortowanie przez wstawianie}
+		\label{alg:ins_sort}
+		\KwIn{tablica $T[1\ldots n]$}
+		\KwOut{posortowana tablica $T$}
+		\BlankLine
+		\For{$i = 2,\ldots n$}
+		{
+			$x = T[i]$\\
+			$j = i -1$\\
+			\While{$j > 0$ \KwAnd $x < T[j]$}
+			{
+				$T[j+1] = T[j]$\\
+				$j = j - 1$\\
+			}
+			$T[j+1] = x$\\
+		}
+	\end{algorithm}
+	
+	\begin{figure}
+		\centering
+		\fbox{
+			\begin{minipage}[c][.5\textwidth]{.5\textwidth}
+				obrazek
+			\end{minipage}
+		}
+		\caption{Podpis.}
+		\label{fig:ex}
+	\end{figure}
+	
+	\begin{table}
+		\centering
+		\caption{Podpis.}
+		\label{tab:ex}
+		\begin{tabular}{llll}
+			\hline
+			{\bf Nag³ówek $1$} & {\bf Nag³ówek $2$} & \ldots & {\bf Nag³ówek $N$} \\
+			\hline
+			\hline
+			Wartoœæ $11$ & Wartoœæ $12$ & \ldots & Wartoœæ $1N$ \\
+			\ldots & \ldots & \ldots & \ldots \\
+			Wartoœæ $M1$ & Wartoœæ $M2$ & \ldots & Wartoœæ $MN$ \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	%**************************************************************************
+	\chapter{Opis programu}
+	
+	Opisaæ w jakim jêzyku program zosta³ napisany, u¿ywane biblioteki oraz inne programy u¿yte przy tworzeniu projektu.
+	
+	%--------------------------------------------------------------------------
+	\section{Mo¿liwoœci programu}
+	
+	Opisaæ dok³adnie jakie program posiada mo¿liwoœci zwi¹zane z tematem projektu.
+
+	%--------------------------------------------------------------------------
+	\section{Opis programu}
+	
+	Opisaæ dok³adnie obs³ugê programu.
+	
+	%**************************************************************************
+	\begin{thebibliography}{99}
+		\bibitem{HA02} Haines, E., Akenine-M\"oller, T.: B\'ezier Triangles and N-Patches. (2002) \\
+			\href{http://www.gamasutra.com/view/feature/2980/bezier_triangles_and_npatches.php}{http://www.gamasutra.com/view/feature/2980/bezier\_triangles\_and\\ \_npatches.php}
+			
+		\bibitem{HSH04} Henriksen, K., Sporring, J., Hornbaek, K.: Virtual Trackballs Revisited. IEEE Transactions on Visualization and Computer Graphics 10(2), 206-216, (2004)
+		
+		\bibitem{Sho92} Shoemake, K.: ARCBALL: A User Interface for Specifying Three-dimensional Orientation Using a Mouse. [w:] Proceedings of the Conference on Graphics Interface '92, Vancouver, Canada, pp. 151-156, (1992)
+		
+		\bibitem{SWND08} Shreiner, D., Woo, M., Neider, J., Davis, T.: OpenGL Programming Guide, 6th Edition. Addison-Wesley, (2008)
+	\end{thebibliography}
+\end{document}

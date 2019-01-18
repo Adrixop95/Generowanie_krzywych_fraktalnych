@@ -1,2 +1,2 @@
 build:
-	g++ main.cpp -lGL -lglfw -lGLU -lglut -o krzywe
+	g++ main.cpp -lGL -lglfw -lGLU -o krzywe

@@ -4,7 +4,6 @@
 #include <fstream>
 #include <GLFW/glfw3.h>
 #include <GL/gl.h>
-#include <GL/glut.h>
 
 using namespace std;
 
@@ -12,13 +11,13 @@ using namespace std;
 #define HEIGHT 720
 #define PI 3.14159265358
 
-typedef GLfloat point2[2];
-point2 v[]={{-1.0, -0.58}, {1.0, -0.58}, {0.0, 1.15}};
-
 
 struct point{
 		double x, y;
 };
+
+typedef GLfloat point2[2];
+point2 v[]={{-1.0, -0.58}, {1.0, -0.58}, {0.0, 1.15}};
 
 int max_depth;
 
@@ -36,7 +35,7 @@ void koch_curve(){
 	double width_offset = (WIDTH - side_length) / 2.0;
 	
 	glClear(GL_COLOR_BUFFER_BIT);
-	glColor3f(0.0f, 1.0f, 0.0f);
+	glColor4f(1.0f, 1.0f, 0.0f, 0.0f);
 	glBegin(GL_LINES);
 	vector<point> points;
 	points.push_back({.x = width_offset, .y = HEIGHT/4.0});
@@ -96,7 +95,7 @@ void dragon_curve(){
 	glOrtho(0, WIDTH, 0, HEIGHT, -1.0, 1.0);
 
 	glClear(GL_COLOR_BUFFER_BIT);
-	glColor3f(0.0f, 1.0f, 0.0f);
+	glColor4f(1.0f, 1.0f, 0.0f, 0.0f);
 	glBegin(GL_LINES);
 	vector<point> points;
 	points.push_back({.x = WIDTH/4.0, .y = HEIGHT/2.0});
@@ -146,7 +145,7 @@ void hilbert_curve(){
 	glOrtho(0, WIDTH, 0, HEIGHT, -1.0, 1.0);
 
 	glClear(GL_COLOR_BUFFER_BIT);
-	glColor3f(0.0f, 1.0f, 0.0f);
+	glColor4f(1.0f, 1.0f, 0.0f, 0.0f);
 	glBegin(GL_LINES);
 		
 	vector<point> points;
@@ -157,6 +156,7 @@ void hilbert_curve(){
 
 	for(int d = 0; d < max_depth; d++){
 		vector<point> new_points;
+
 		for(int i = 0; i < points.size(); i += 4){
 			if(abs(points[i+1].x - points[i].x) < abs(points[i+1].y - points[i].y)){
 				double offset = (points[i+1].y - points[i].y) / 4.0;
@@ -234,85 +234,63 @@ void hilbert_curve(){
 	glfwSwapBuffers(window);
 }
 
-void triangle( point2 a, point2 b, point2 c) {
-	glBegin(GL_TRIANGLES);
-	glVertex2fv(a);
-	glVertex2fv(b);
-	glVertex2fv(c);
-	glEnd();
-}
-
-void divide_triangle(point2 a, point2 b, point2 c, int m) {
-    point2 v0, v1, v2;
-    int j;
-
-    if(m>0) {
-        for(j=0; j<2; j++){
-            v0[j]=(a[j]+b[j])/2;
-        } 
-        for(j=0; j<2; j++){
-             v1[j]=(a[j]+c[j])/2;
-        }
-
-        for(j=0; j<2; j++){ 
-            v2[j]=(b[j]+c[j])/2; 
-        }
-
-        divide_triangle(a, v0, v1, m-1);
-        divide_triangle(c, v1, v2, m-1);
-        divide_triangle(b, v2, v0, m-1);
-    } else {
-        (triangle(a,b,c));
-    }
-}
-
-void display() {
-	glClear(GL_COLOR_BUFFER_BIT);
-	divide_triangle(v[0], v[1], v[2], max_depth);
-	glFlush();
-}
-
 void sierpinski_gasket(){
-
+		
 	cout << "Podaj maksymalne zagnieżdżenie " << endl;
-	cin >> max_depth; 	
+	cin >> max_depth;
+	
+	glfwInit();
+	GLFWwindow * window = glfwCreateWindow(WIDTH, HEIGHT, "Trojkat Sierpinskiego", NULL, NULL);
 
-	int argc = 1;
-	char *argv[1] = {(char*)"Something"};
-	glutInit(&argc, argv);
+	glfwMakeContextCurrent(window);
+	glOrtho(-WIDTH/2, WIDTH/2, 0, HEIGHT, -1.0, 1.0);
 
-	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
-	glutInitWindowSize(WIDTH, HEIGHT);
-	glutCreateWindow("Trojkat Sierpinskiego");
-	glutDisplayFunc(display);
+	int num_corners = 3;
+	point corners[num_corners];
+	corners[0].x = 0;
+	corners[0].y = HEIGHT;
+	corners[1].x = WIDTH/2;
+	corners[1].y = 0;
+	corners[2].x = -WIDTH/2;
+	corners[2].y = 0;
 
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluOrtho2D(-2.0, 2.0, -2.0, 2.0);
-	glMatrixMode(GL_MODELVIEW);
+	default_random_engine rand;
+	uniform_real_distribution<double> height_dist(0.0, (double) HEIGHT);
+	uniform_real_distribution<double> width_dist((double) -WIDTH/2.0, (double) WIDTH/2.0);
+	uniform_int_distribution<int> corner_dist(0, num_corners-1);
+
 	glClear(GL_COLOR_BUFFER_BIT);
-	glColor3f(0.0f, 1.0f, 0.0f);
+	glBegin(GL_POINTS);
 
-	glutMainLoop();
+	point p;
+	p.x = width_dist(rand);
+	p.y = height_dist(rand);
+
+	for(int i = 0; i < max_depth * 10000; i++){
+		int corner = corner_dist(rand);
+
+		p.x = p.x - (p.x - corners[corner].x) / 2.0;
+		p.y = p.y - (p.y - corners[corner].y) / 2.0;
+
+		glColor4f(1.0f, 1.0f, 0.0f, 0.0f);
+		glVertex2i(p.x, p.y);
+	}
+
+	glEnd();
+	glfwSwapBuffers(window);
 }
 
 int main(int argc, char * argv[]) {
 	int user_choice;
 	bool is_running = true;
 	  
-	// Powitanie
 	cout << "Witaj! Wybierz jedna z opcji!" << endl;
 
-	// Proste menu wyboru
 	while (is_running == true) {
-
-		// Opcje wyboru
 		cout << "\n1 - Krzywa Kocha (Koch snowflake)" << endl;
 		cout << "2 - Smok Heighwaya (Dragon curve)" << endl;
 		cout << "3 - Krzywa Hilberta (Hilbert curve)" << endl;
 		cout << "4 - Trójkąt Sierpińskiego (Sierpinski gasket)" << endl;
-		cout << "5 - null" << endl;
-		cout << "6 - null" << endl;
 		cout << "0 - Wyjdz z aplikacji\n" << endl;
 
 		cin >> user_choice;
@@ -329,10 +307,6 @@ int main(int argc, char * argv[]) {
 		}
 		else if (user_choice == 4) {
 			sierpinski_gasket();
-		}
-		else if (user_choice == 5) {
-		}
-		else if (user_choice == 6) {
 		}
 		else if (user_choice == 0) {
 			is_running = false;
